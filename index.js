@@ -22,8 +22,26 @@ const sum = (arr) => {
   return total;
 };
 
+const longestWord = (str) => {
+  if (typeof str === String) {
+    let arr = str.split(" ");
+    let longest = 0;
+    let returnedWord;
+    arr.forEach((word) => {
+      if (word.length > longest) {
+        longest = word.length;
+        returnedWord = word;
+      }
+      return `The longest word is ${returnedWord} with ${longest} characters`;
+    });
+  } else {
+    throw "argument must be a string!";
+  }
+};
+
 module.exports = {
   square,
   cube,
   sum,
+  longestWord,
 };
