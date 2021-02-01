@@ -31,8 +31,8 @@ const longestWord = (str) => {
       longest = word.length;
       returnedWord = word;
     }
-    return `The longest word is ${returnedWord} with ${longest} characters`;
   });
+  return `The longest word is "${returnedWord}" with ${longest} characters`;
 };
 
 module.exports = {
