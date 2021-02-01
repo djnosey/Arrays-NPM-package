@@ -1,4 +1,4 @@
-const square = (arr) => {
+const square = (arr : [number]) => {
   if (Array.isArray(arr)) {
     return arr.map((item) => item * item);
   } else {
@@ -6,7 +6,7 @@ const square = (arr) => {
   }
 };
 
-const cube = (arr) => {
+const cube = (arr : [number]) => {
   if (Array.isArray(arr)) {
     return arr.map((item) => item * item * item);
   } else {
@@ -14,7 +14,7 @@ const cube = (arr) => {
   }
 };
 
-const sum = (arr) => {
+const sum = (arr :[number]) => {
   let total = 0;
   arr.forEach((element) => {
     total += element;
@@ -22,10 +22,10 @@ const sum = (arr) => {
   return total;
 };
 
-const longestWord = (str) => {
+const longestWord = (str:string) => {
   let arr = str.split(" ");
   let longest = 0;
-  let returnedWord;
+  let returnedWord :string;
   arr.forEach((word) => {
     if (word.length > longest) {
       longest = word.length;
@@ -34,8 +34,6 @@ const longestWord = (str) => {
     return `The longest word is ${returnedWord} with ${longest} characters`;
   });
 };
-
-console.log(longestWord("hjfdhkjhfdksjhfkdj fjdhfk hfkdjhfkds fjdks"));
 
 module.exports = {
   square,
