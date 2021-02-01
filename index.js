@@ -1,4 +1,4 @@
-const square = (arr : [number]) => {
+const square = (arr) => {
   if (Array.isArray(arr)) {
     return arr.map((item) => item * item);
   } else {
@@ -6,7 +6,7 @@ const square = (arr : [number]) => {
   }
 };
 
-const cube = (arr : [number]) => {
+const cube = (arr) => {
   if (Array.isArray(arr)) {
     return arr.map((item) => item * item * item);
   } else {
@@ -14,7 +14,7 @@ const cube = (arr : [number]) => {
   }
 };
 
-const sum = (arr :[number]) => {
+const sum = (arr) => {
   let total = 0;
   arr.forEach((element) => {
     total += element;
@@ -22,10 +22,10 @@ const sum = (arr :[number]) => {
   return total;
 };
 
-const longestWord = (str:string) => {
+const longestWord = (str) => {
   let arr = str.split(" ");
   let longest = 0;
-  let returnedWord :string;
+  let returnedWord;
   arr.forEach((word) => {
     if (word.length > longest) {
       longest = word.length;
